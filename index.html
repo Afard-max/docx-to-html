@@ -9,12 +9,24 @@
 
     <title id="titulo-pagina">Visor de Word en Pantalla</title>
 
+    <!-- Aplica tema, alto contraste y dirección de texto (RTL/LTR) ANTES de
+         pintar la página, para evitar parpadeos antes de que main.js corra. -->
     <script>
         (function () {
             const temaGuardado = localStorage.getItem('tema') || 'system';
+            const contrasteGuardado = localStorage.getItem('contraste') === 'true';
             const prefiereOscuroSO = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
             if (temaGuardado === 'dark' || (temaGuardado === 'system' && prefiereOscuroSO)) {
                 document.documentElement.dataset.theme = 'dark';
+            }
+            if (contrasteGuardado) {
+                document.documentElement.dataset.contraste = 'true';
+            }
+
+            const idiomaGuardado = localStorage.getItem('idioma') || (navigator.language.startsWith('en') ? 'en' : 'es');
+            if (idiomaGuardado === 'ar' || idiomaGuardado === 'ur') {
+                document.documentElement.dir = 'rtl';
             }
         })();
     </script>
@@ -52,6 +64,14 @@
                     </div>
 
                     <div class="popup-seccion">
+                        <h4 data-i18n="configAccesibilidad">Accesibilidad</h4>
+                        <label class="radio-opcion">
+                            <input type="checkbox" id="check-contraste">
+                            <span data-i18n="configContraste">Alto contraste</span>
+                        </label>
+                    </div>
+
+                    <div class="popup-seccion popup-seccion--scroll">
                         <h4 data-i18n="configIdioma">Idioma</h4>
                         <label class="radio-opcion">
                             <input type="radio" name="idioma" value="es">
@@ -60,6 +80,38 @@
                         <label class="radio-opcion">
                             <input type="radio" name="idioma" value="en">
                             <span>English</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="zh">
+                            <span>中文</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="hi">
+                            <span>हिन्दी</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="fr">
+                            <span>Français</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="ar">
+                            <span>العربية</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="bn">
+                            <span>বাংলা</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="pt">
+                            <span>Português</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="ru">
+                            <span>Русский</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="ur">
+                            <span>اردو</span>
                         </label>
                     </div>
                 </div>
@@ -106,7 +158,7 @@
         </div>
         <div class="pie-seccion">
             <a href="https://github.com/Afard-max" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/ruizdiazalexandertech/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/TU-USUARIO-AQUI" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
     </footer>
 

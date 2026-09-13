@@ -37,6 +37,49 @@ html[data-theme="dark"] {
 }
 
 /* ==========================================================================
+   ALTO CONTRASTE
+   Independiente del tema claro/oscuro: se puede combinar con cualquiera.
+   ========================================================================== */
+
+html[data-contraste="true"] {
+    --bg-body: #ffffff;
+    --bg-contenedor: #ffffff;
+    --texto-principal: #000000;
+    --texto-secundario: #000000;
+    --borde-suave: #000000;
+    --sombra: rgba(0, 0, 0, 0.6);
+    --acento: #0000ee;
+    --input-zona-bg: #ffffff;
+    --estado-error: #b30000;
+    --estado-ok: #006400;
+}
+
+html[data-contraste="true"][data-theme="dark"] {
+    --bg-body: #000000;
+    --bg-contenedor: #000000;
+    --texto-principal: #ffffff;
+    --texto-secundario: #ffffff;
+    --borde-suave: #ffffff;
+    --sombra: rgba(255, 255, 255, 0.5);
+    --acento: #ffff00;
+    --input-zona-bg: #000000;
+    --estado-error: #ff8080;
+    --estado-ok: #80ff80;
+}
+
+html[data-contraste="true"] .contenedor,
+html[data-contraste="true"] .popup-config,
+html[data-contraste="true"] .btn-config,
+html[data-contraste="true"] .input-zona,
+html[data-contraste="true"] #visor-contenido {
+    border-width: 2px;
+}
+
+html[data-contraste="true"] .btn-accion {
+    border: 2px solid var(--texto-principal);
+}
+
+/* ==========================================================================
     BASE
    ========================================================================== */
 
@@ -139,7 +182,7 @@ h2, h3 {
 }
 
 /* ==========================================================================
-   BOTONES DE ACCIÓN (DESCARGAR / COPIAR / QUITAR DOCUMENTO)
+   BOTONES DE ACCIÓN
    ========================================================================== */
 
 .acciones-documento {
@@ -222,7 +265,12 @@ h2, h3 {
     border-radius: 8px;
     box-shadow: 0 6px 16px var(--sombra);
     padding: 14px;
-    min-width: 180px;
+    min-width: 190px;
+}
+
+html[dir="rtl"] .popup-config {
+    right: auto;
+    left: 0;
 }
 
 .popup-seccion {
@@ -234,6 +282,17 @@ h2, h3 {
 
 .popup-seccion:last-child {
     margin-bottom: 0;
+}
+
+.popup-seccion--scroll {
+    max-height: 190px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+html[dir="rtl"] .popup-seccion--scroll {
+    padding-right: 0;
+    padding-left: 4px;
 }
 
 .popup-seccion h4 {
@@ -334,10 +393,10 @@ h2, h3 {
     }
 
     .popup-config {
-        min-width: 160px;
+        min-width: 170px;
     }
 
-        .pie-pagina {
+    .pie-pagina {
         flex-direction: column;
         align-items: center;
         gap: 12px;

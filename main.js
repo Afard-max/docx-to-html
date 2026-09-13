@@ -1,5 +1,5 @@
 // ==========================================================================
-// DICCIONARIO DE TRADUCCIONES
+// DICCIONARIO DE TRADUCCIONES (10 idiomas más hablados del mundo)
 // ==========================================================================
 const TRADUCCIONES = {
     es: {
@@ -25,6 +25,8 @@ const TRADUCCIONES = {
         configClaro: "Claro",
         configOscuro: "Oscuro",
         configSistema: "Sistema",
+        configAccesibilidad: "Accesibilidad",
+        configContraste: "Alto contraste",
         configIdioma: "Idioma",
         imagenOmitida: "[Imagen Omitida]",
         footerRepo: "Código en GitHub",
@@ -53,10 +55,252 @@ const TRADUCCIONES = {
         configClaro: "Light",
         configOscuro: "Dark",
         configSistema: "System",
+        configAccesibilidad: "Accessibility",
+        configContraste: "High contrast",
         configIdioma: "Language",
         imagenOmitida: "[Image Omitted]",
         footerRepo: "Code on GitHub",
         footerMammoth: "Made with Mammoth.js"
+    },
+    fr: {
+        tituloPagina: "Visionneuse de documents Word",
+        titulo: "Insérer et visualiser un document Word",
+        estadoVerificando: "Vérification de la connexion à la bibliothèque Mammoth...",
+        estadoOk: "✓ Bibliothèque prête à traiter les fichiers.",
+        estadoError: "✗ Erreur : la bibliothèque Mammoth n'a pas pu être chargée. Vérifiez votre connexion Internet ou téléchargez le fichier localement.",
+        btnSeleccionar: "Cliquez ici pour sélectionner votre fichier (.docx)",
+        labelArchivo: "Sélectionner un fichier Word",
+        contenidoTitulo: "Contenu du document :",
+        visorInicial: "Le document sélectionné s'affichera ici...",
+        visorProcesando: "Traitement et conversion du document...",
+        visorVacio: "Le document est vide ou ne contient pas de texte compatible.",
+        visorErrorProceso: "Erreur lors de la lecture ou du traitement du fichier.",
+        tipoInvalido: "Format non valide. Veuillez sélectionner un fichier .docx.",
+        btnDescargar: "Télécharger en HTML",
+        btnCopiar: "Copier le HTML",
+        btnCopiado: "Copié !",
+        btnQuitar: "Supprimer le document",
+        configAbrir: "Ouvrir les paramètres",
+        configTema: "Thème",
+        configClaro: "Clair",
+        configOscuro: "Sombre",
+        configSistema: "Système",
+        configAccesibilidad: "Accessibilité",
+        configContraste: "Contraste élevé",
+        configIdioma: "Langue",
+        imagenOmitida: "[Image omise]",
+        footerRepo: "Code sur GitHub",
+        footerMammoth: "Fait avec Mammoth.js"
+    },
+    pt: {
+        tituloPagina: "Visualizador de Documentos Word",
+        titulo: "Inserir e Visualizar Documento do Word",
+        estadoVerificando: "Verificando conexão com a biblioteca Mammoth...",
+        estadoOk: "✓ Biblioteca pronta para processar arquivos.",
+        estadoError: "✗ Erro: a biblioteca Mammoth não carregou. Verifique sua conexão com a internet ou baixe o arquivo localmente.",
+        btnSeleccionar: "Clique aqui para selecionar seu arquivo (.docx)",
+        labelArchivo: "Selecionar arquivo do Word",
+        contenidoTitulo: "Conteúdo do Documento:",
+        visorInicial: "O documento selecionado será exibido aqui...",
+        visorProcesando: "Processando e convertendo documento...",
+        visorVacio: "O documento está vazio ou não contém texto compatível.",
+        visorErrorProceso: "Erro ao ler ou processar o arquivo.",
+        tipoInvalido: "Formato inválido. Selecione um arquivo .docx.",
+        btnDescargar: "Baixar como HTML",
+        btnCopiar: "Copiar HTML",
+        btnCopiado: "Copiado!",
+        btnQuitar: "Remover documento",
+        configAbrir: "Abrir configurações",
+        configTema: "Tema",
+        configClaro: "Claro",
+        configOscuro: "Escuro",
+        configSistema: "Sistema",
+        configAccesibilidad: "Acessibilidade",
+        configContraste: "Alto contraste",
+        configIdioma: "Idioma",
+        imagenOmitida: "[Imagem Omitida]",
+        footerRepo: "Código no GitHub",
+        footerMammoth: "Feito com Mammoth.js"
+    },
+    ru: {
+        tituloPagina: "Просмотр документов Word",
+        titulo: "Вставить и просмотреть документ Word",
+        estadoVerificando: "Проверка подключения к библиотеке Mammoth...",
+        estadoOk: "✓ Библиотека готова к обработке файлов.",
+        estadoError: "✗ Ошибка: библиотека Mammoth не загрузилась. Проверьте подключение к интернету или скачайте файл локально.",
+        btnSeleccionar: "Нажмите здесь, чтобы выбрать файл (.docx)",
+        labelArchivo: "Выбрать файл Word",
+        contenidoTitulo: "Содержимое документа:",
+        visorInicial: "Выбранный документ будет показан здесь...",
+        visorProcesando: "Обработка и конвертация документа...",
+        visorVacio: "Документ пуст или не содержит поддерживаемого текста.",
+        visorErrorProceso: "Ошибка при чтении или обработке файла.",
+        tipoInvalido: "Неверный формат. Пожалуйста, выберите файл .docx.",
+        btnDescargar: "Скачать как HTML",
+        btnCopiar: "Копировать HTML",
+        btnCopiado: "Скопировано!",
+        btnQuitar: "Удалить документ",
+        configAbrir: "Открыть настройки",
+        configTema: "Тема",
+        configClaro: "Светлая",
+        configOscuro: "Тёмная",
+        configSistema: "Системная",
+        configAccesibilidad: "Специальные возможности",
+        configContraste: "Высокая контрастность",
+        configIdioma: "Язык",
+        imagenOmitida: "[Изображение пропущено]",
+        footerRepo: "Код на GitHub",
+        footerMammoth: "Сделано с Mammoth.js"
+    },
+    zh: {
+        tituloPagina: "Word 文档查看器",
+        titulo: "插入并查看 Word 文档",
+        estadoVerificando: "正在检查与 Mammoth 库的连接……",
+        estadoOk: "✓ 库已准备好处理文件。",
+        estadoError: "✗ 错误：Mammoth 库未能加载。请检查您的网络连接或下载本地文件。",
+        btnSeleccionar: "点击此处选择您的文件（.docx）",
+        labelArchivo: "选择 Word 文件",
+        contenidoTitulo: "文档内容：",
+        visorInicial: "所选文档将在此处显示……",
+        visorProcesando: "正在处理并转换文档……",
+        visorVacio: "文档为空或不包含可识别的文本。",
+        visorErrorProceso: "读取或处理文件时出错。",
+        tipoInvalido: "格式无效。请选择 .docx 文件。",
+        btnDescargar: "下载为 HTML",
+        btnCopiar: "复制 HTML",
+        btnCopiado: "已复制！",
+        btnQuitar: "移除文档",
+        configAbrir: "打开设置",
+        configTema: "主题",
+        configClaro: "浅色",
+        configOscuro: "深色",
+        configSistema: "跟随系统",
+        configAccesibilidad: "无障碍",
+        configContraste: "高对比度",
+        configIdioma: "语言",
+        imagenOmitida: "[图片已省略]",
+        footerRepo: "GitHub 上的代码",
+        footerMammoth: "由 Mammoth.js 构建"
+    },
+    hi: {
+        tituloPagina: "वर्ड दस्तावेज़ व्यूअर",
+        titulo: "वर्ड दस्तावेज़ डालें और देखें",
+        estadoVerificando: "Mammoth लाइब्रेरी से कनेक्शन जाँचा जा रहा है...",
+        estadoOk: "✓ फ़ाइलें प्रोसेस करने के लिए लाइब्रेरी तैयार है।",
+        estadoError: "✗ त्रुटि: Mammoth लाइब्रेरी लोड नहीं हुई। अपना इंटरनेट कनेक्शन जाँचें या फ़ाइल स्थानीय रूप से डाउनलोड करें।",
+        btnSeleccionar: "अपनी फ़ाइल (.docx) चुनने के लिए यहाँ क्लिक करें",
+        labelArchivo: "वर्ड फ़ाइल चुनें",
+        contenidoTitulo: "दस्तावेज़ की सामग्री:",
+        visorInicial: "चयनित दस्तावेज़ यहाँ दिखाया जाएगा...",
+        visorProcesando: "दस्तावेज़ को प्रोसेस और परिवर्तित किया जा रहा है...",
+        visorVacio: "दस्तावेज़ खाली है या इसमें संगत टेक्स्ट नहीं है।",
+        visorErrorProceso: "फ़ाइल पढ़ने या प्रोसेस करने में त्रुटि हुई।",
+        tipoInvalido: "अमान्य प्रारूप। कृपया एक .docx फ़ाइल चुनें।",
+        btnDescargar: "HTML के रूप में डाउनलोड करें",
+        btnCopiar: "HTML कॉपी करें",
+        btnCopiado: "कॉपी हो गया!",
+        btnQuitar: "दस्तावेज़ हटाएँ",
+        configAbrir: "सेटिंग्स खोलें",
+        configTema: "थीम",
+        configClaro: "हल्का",
+        configOscuro: "गहरा",
+        configSistema: "सिस्टम",
+        configAccesibilidad: "सुगम्यता",
+        configContraste: "उच्च कंट्रास्ट",
+        configIdioma: "भाषा",
+        imagenOmitida: "[छवि छोड़ी गई]",
+        footerRepo: "GitHub पर कोड",
+        footerMammoth: "Mammoth.js से बनाया गया"
+    },
+    ar: {
+        tituloPagina: "عارض مستندات وورد",
+        titulo: "إدراج وعرض مستند وورد",
+        estadoVerificando: "جارٍ التحقق من الاتصال بمكتبة Mammoth...",
+        estadoOk: "✓ المكتبة جاهزة لمعالجة الملفات.",
+        estadoError: "✗ خطأ: تعذّر تحميل مكتبة Mammoth. تحقق من اتصالك بالإنترنت أو نزّل الملف محليًا.",
+        btnSeleccionar: "انقر هنا لاختيار ملفك (.docx)",
+        labelArchivo: "اختر ملف وورد",
+        contenidoTitulo: "محتوى المستند:",
+        visorInicial: "سيظهر المستند المحدد هنا...",
+        visorProcesando: "جارٍ معالجة المستند وتحويله...",
+        visorVacio: "المستند فارغ أو لا يحتوي على نص متوافق.",
+        visorErrorProceso: "حدث خطأ أثناء قراءة الملف أو معالجته.",
+        tipoInvalido: "صيغة غير صالحة. الرجاء اختيار ملف .docx.",
+        btnDescargar: "تنزيل كملف HTML",
+        btnCopiar: "نسخ HTML",
+        btnCopiado: "تم النسخ!",
+        btnQuitar: "إزالة المستند",
+        configAbrir: "فتح الإعدادات",
+        configTema: "المظهر",
+        configClaro: "فاتح",
+        configOscuro: "داكن",
+        configSistema: "النظام",
+        configAccesibilidad: "إمكانية الوصول",
+        configContraste: "تباين عالٍ",
+        configIdioma: "اللغة",
+        imagenOmitida: "[تم حذف الصورة]",
+        footerRepo: "الكود على GitHub",
+        footerMammoth: "صُنع باستخدام Mammoth.js"
+    },
+    bn: {
+        tituloPagina: "ওয়ার্ড ডকুমেন্ট ভিউয়ার",
+        titulo: "ওয়ার্ড ডকুমেন্ট যুক্ত করুন এবং দেখুন",
+        estadoVerificando: "Mammoth লাইব্রেরির সংযোগ যাচাই করা হচ্ছে...",
+        estadoOk: "✓ ফাইল প্রক্রিয়া করার জন্য লাইব্রেরি প্রস্তুত।",
+        estadoError: "✗ ত্রুটি: Mammoth লাইব্রেরি লোড হয়নি। আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন বা ফাইলটি স্থানীয়ভাবে ডাউনলোড করুন।",
+        btnSeleccionar: "আপনার ফাইল (.docx) নির্বাচন করতে এখানে ক্লিক করুন",
+        labelArchivo: "ওয়ার্ড ফাইল নির্বাচন করুন",
+        contenidoTitulo: "ডকুমেন্টের বিষয়বস্তু:",
+        visorInicial: "নির্বাচিত ডকুমেন্ট এখানে দেখানো হবে...",
+        visorProcesando: "ডকুমেন্ট প্রক্রিয়া ও রূপান্তর করা হচ্ছে...",
+        visorVacio: "ডকুমেন্টটি খালি অথবা সামঞ্জস্যপূর্ণ টেক্সট নেই।",
+        visorErrorProceso: "ফাইল পড়তে বা প্রক্রিয়া করতে ত্রুটি হয়েছে।",
+        tipoInvalido: "অবৈধ ফরম্যাট। অনুগ্রহ করে একটি .docx ফাইল নির্বাচন করুন।",
+        btnDescargar: "HTML হিসেবে ডাউনলোড করুন",
+        btnCopiar: "HTML কপি করুন",
+        btnCopiado: "কপি হয়েছে!",
+        btnQuitar: "ডকুমেন্ট সরান",
+        configAbrir: "সেটিংস খুলুন",
+        configTema: "থিম",
+        configClaro: "হালকা",
+        configOscuro: "গাঢ়",
+        configSistema: "সিস্টেম",
+        configAccesibilidad: "প্রবেশযোগ্যতা",
+        configContraste: "উচ্চ কনট্রাস্ট",
+        configIdioma: "ভাষা",
+        imagenOmitida: "[ছবি বাদ দেওয়া হয়েছে]",
+        footerRepo: "GitHub-এ কোড",
+        footerMammoth: "Mammoth.js দিয়ে তৈরি"
+    },
+    ur: {
+        tituloPagina: "ورڈ دستاویز ویور",
+        titulo: "ورڈ دستاویز داخل کریں اور دیکھیں",
+        estadoVerificando: "Mammoth لائبریری کے کنکشن کی جانچ ہو رہی ہے...",
+        estadoOk: "✓ فائلیں پراسیس کرنے کے لیے لائبریری تیار ہے۔",
+        estadoError: "✗ خرابی: Mammoth لائبریری لوڈ نہیں ہوئی۔ اپنا انٹرنیٹ کنکشن چیک کریں یا فائل مقامی طور پر ڈاؤن لوڈ کریں۔",
+        btnSeleccionar: "اپنی فائل (.docx) منتخب کرنے کے لیے یہاں کلک کریں",
+        labelArchivo: "ورڈ فائل منتخب کریں",
+        contenidoTitulo: "دستاویز کا مواد:",
+        visorInicial: "منتخب کردہ دستاویز یہاں دکھائی جائے گی...",
+        visorProcesando: "دستاویز پراسیس اور تبدیل کی جا رہی ہے...",
+        visorVacio: "دستاویز خالی ہے یا اس میں مطابقت پذیر متن موجود نہیں۔",
+        visorErrorProceso: "فائل پڑھنے یا پراسیس کرنے میں خرابی ہوئی۔",
+        tipoInvalido: "غلط فارمیٹ۔ براہ کرم ایک .docx فائل منتخب کریں۔",
+        btnDescargar: "HTML کے طور پر ڈاؤن لوڈ کریں",
+        btnCopiar: "HTML کاپی کریں",
+        btnCopiado: "کاپی ہو گیا!",
+        btnQuitar: "دستاویز ہٹائیں",
+        configAbrir: "ترتیبات کھولیں",
+        configTema: "تھیم",
+        configClaro: "ہلکا",
+        configOscuro: "گہرا",
+        configSistema: "سسٹم",
+        configAccesibilidad: "رسائی",
+        configContraste: "زیادہ تضاد",
+        configIdioma: "زبان",
+        imagenOmitida: "[تصویر چھوڑ دی گئی]",
+        footerRepo: "GitHub پر کوڈ",
+        footerMammoth: "Mammoth.js کے ساتھ بنایا گیا"
     }
 };
 
@@ -68,6 +312,10 @@ let visorEstado = 'inicial';
 
 function t(clave) {
     return TRADUCCIONES[idiomaActual][clave] || clave;
+}
+
+function esRTL(idioma) {
+    return idioma === 'ar' || idioma === 'ur';
 }
 
 function formatearTamano(bytes) {
@@ -89,6 +337,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const tituloPaginaEl = document.getElementById('titulo-pagina');
     const zonaCarga = document.getElementById('btn-seleccionar');
     const infoArchivo = document.getElementById('info-archivo');
+    const checkContraste = document.getElementById('check-contraste');
 
     let htmlConvertidoActual = null;
     let nombreBaseActual = null;
@@ -98,6 +347,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // ======================================================
     function aplicarIdioma() {
         document.documentElement.lang = idiomaActual;
+        document.documentElement.dir = esRTL(idiomaActual) ? 'rtl' : 'ltr';
         tituloPaginaEl.textContent = t('tituloPagina');
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -131,7 +381,6 @@ window.addEventListener('DOMContentLoaded', () => {
             case 'tipoInvalido':
                 visor.innerHTML = `<span style='color:red;'>${t('tipoInvalido')}</span>`;
                 break;
-            // 'contenido' no se retraduce: es el HTML propio del documento convertido
         }
 
         document.querySelectorAll('input[name="idioma"]').forEach(radio => {
@@ -234,7 +483,7 @@ ${htmlConvertidoActual}
     });
 
     // ======================================================
-    // POPUP DE CONFIGURACIÓN (tema + idioma)
+    // POPUP DE CONFIGURACIÓN
     // ======================================================
     function abrirPopup() {
         popupConfig.hidden = false;
@@ -305,6 +554,27 @@ ${htmlConvertidoActual}
     });
 
     // ======================================================
+    // ALTO CONTRASTE
+    // ======================================================
+    function aplicarContraste(activo) {
+        if (activo) {
+            document.documentElement.dataset.contraste = 'true';
+        } else {
+            delete document.documentElement.dataset.contraste;
+        }
+    }
+
+    const contrasteGuardado = localStorage.getItem('contraste') === 'true';
+    checkContraste.checked = contrasteGuardado;
+    aplicarContraste(contrasteGuardado);
+
+    checkContraste.addEventListener('change', (e) => {
+        const activo = e.target.checked;
+        localStorage.setItem('contraste', activo ? 'true' : 'false');
+        aplicarContraste(activo);
+    });
+
+    // ======================================================
     // PROCESAMIENTO DEL ARCHIVO (compartido entre click y drag&drop)
     // ======================================================
     async function procesarArchivo(archivo) {
@@ -362,7 +632,6 @@ ${htmlConvertidoActual}
         }
     }
 
-    // Selección vía input de archivo
     inputArchivo.addEventListener('change', (evento) => {
         if (!evento.target.files || evento.target.files.length === 0) return;
         procesarArchivo(evento.target.files[0]);
@@ -371,7 +640,6 @@ ${htmlConvertidoActual}
     // ======================================================
     // DRAG & DROP
     // ======================================================
-    // Evita que el navegador abra el archivo si se suelta fuera de la zona
     ['dragover', 'drop'].forEach(evt => {
         document.addEventListener(evt, (e) => e.preventDefault());
     });
