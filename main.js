@@ -112,19 +112,17 @@ ${htmlConvertidoActual}
             // CONFIGURACIÓN DE ALTO RENDIMIENTO:
             // SE LE INDICA A MAMMOTH COMO TRATAR EL DOCUMENTO
             const opciones = {
-
-                // MUESTRA EN UN FONDO GRIS LA IMAGEN PROCESADA
-                convertImage: function (elemento) {
-                    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='100' height='30'>
-                        <rect width='100' height='30' style='fill:#ddd;'/>
-                        <text x='10' y='20' style='font-family:Arial;font-size:12px;fill:#666;'>[Imagen Omitida]</text>
+                convertImage: mammoth.images.imgElement(function (elemento) {
+                const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='100' height='30'>
+                    <rect width='100' height='30' style='fill:#ddd;'/>
+                    <text x='10' y='20' style='font-family:Arial;font-size:12px;fill:#666;'>[Imagen Omitida]</text>
                     </svg>`;
 
-                    return {
-                        src: "data:image/svg+xml," + encodeURIComponent(svg)
-                    };
-                }
-            };
+        return Promise.resolve({
+            src: "data:image/svg+xml," + encodeURIComponent(svg)
+        });
+    })
+};
 
             // SE PASA EL DOCUMENTO OPTIMIZADO A LA PAGINA
             const resultado = await mammoth.convertToHtml({ arrayBuffer: arrayBuffer }, opciones);
