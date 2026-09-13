@@ -17,6 +17,7 @@
 
     --estado-error: #d9534f;
     --estado-ok: #28a745;
+    --texto-boton-accion: #ffffff;
 }
 
 html[data-theme="dark"] {
@@ -65,6 +66,7 @@ html[data-contraste="true"][data-theme="dark"] {
     --input-zona-bg: #000000;
     --estado-error: #ff8080;
     --estado-ok: #80ff80;
+    --texto-boton-accion: #000000;
 }
 
 html[data-contraste="true"] .contenedor,
@@ -203,7 +205,7 @@ h2, h3 {
     font-family: inherit;
     cursor: pointer;
     background: var(--acento);
-    color: #ffffff;
+    color: var(--texto-boton-accion);
     transition: opacity 0.2s ease;
 }
 
