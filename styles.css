@@ -3,7 +3,7 @@
    ========================================================================== */
 
 :root {
-    color-scheme: light; /* Le indica al navegador qué esquema usan los widgets nativos (checkboxes, scrollbars, selects) */
+    color-scheme: light;
 
     --bg-body: #f4f4f9;
     --bg-contenedor: #ffffff;
@@ -17,10 +17,6 @@
 
     --estado-error: #d9534f;
     --estado-ok: #28a745;
-
-    --switch-bg: #cccccc;
-    --switch-bg-activo: #007bff;
-    --switch-circulo: #ffffff;
 }
 
 html[data-theme="dark"] {
@@ -38,10 +34,6 @@ html[data-theme="dark"] {
 
     --estado-error: #ff6b66;
     --estado-ok: #4ade80;
-
-    --switch-bg: #3a3d42;
-    --switch-bg-activo: #4da3ff;
-    --switch-circulo: #1e2126;
 }
 
 /* ==========================================================================
@@ -78,7 +70,7 @@ h2, h3 {
     border: 2px dashed var(--acento);
     padding: 30px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 4px;
     cursor: pointer;
     background: var(--input-zona-bg);
@@ -87,7 +79,7 @@ h2, h3 {
     color: var(--acento);
     font-size: 1em;
     font-family: inherit;
-    transition: background-color 0.25s ease, border-color 0.25s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .input-zona:hover {
@@ -99,6 +91,11 @@ h2, h3 {
     outline-offset: 2px;
 }
 
+.input-zona--arrastrando {
+    border-style: solid;
+    box-shadow: 0 0 0 3px var(--acento) inset;
+}
+
 .visualmente-oculto {
     position: absolute;
     width: 1px;
@@ -108,13 +105,14 @@ h2, h3 {
     white-space: nowrap;
 }
 
+.info-archivo {
+    font-size: 0.85em;
+    color: var(--texto-secundario);
+    margin: 0 0 15px 4px;
+}
+
 /* ==========================================================================
    VISOR DE CONTENIDO
-   Se mantiene SIEMPRE claro ("hoja de papel"), independientemente del tema
-   activo. El HTML que entrega Mammoth trae su propio color de texto (heredado
-   del .docx), normalmente oscuro. Si esta zona pasara a fondo oscuro con el
-   tema, ese texto quedaría invisible sin forma confiable de corregirlo
-   automáticamente.
    ========================================================================== */
 
 #visor-contenido {
@@ -126,7 +124,7 @@ h2, h3 {
     overflow-y: auto;
     max-height: 500px;
     border-radius: 4px;
-    color-scheme: light; /* fuerza scrollbar claro en esta zona incluso en tema oscuro */
+    color-scheme: light;
 }
 
 #visor-contenido img {
@@ -141,7 +139,7 @@ h2, h3 {
 }
 
 /* ==========================================================================
-   BOTONES DE ACCIÓN (DESCARGAR / QUITAR DOCUMENTO)
+   BOTONES DE ACCIÓN (DESCARGAR / COPIAR / QUITAR DOCUMENTO)
    ========================================================================== */
 
 .acciones-documento {
@@ -180,68 +178,116 @@ h2, h3 {
 }
 
 /* ==========================================================================
-   SWITCH DE TEMA (CLARO / OSCURO)
+   BARRA SUPERIOR Y MENÚ POPUP DE CONFIGURACIÓN
    ========================================================================== */
 
-.selector-tema {
+.barra-superior {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    gap: 10px;
     margin-bottom: 15px;
 }
 
-.selector-tema span {
+.config-wrapper {
+    position: relative;
+}
+
+.btn-config {
+    background: var(--input-zona-bg);
+    border: 1px solid var(--borde-suave);
+    border-radius: 6px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: var(--texto-principal);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-config:hover {
+    opacity: 0.85;
+}
+
+.btn-config:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 2px;
+}
+
+.popup-config {
+    position: absolute;
+    top: 46px;
+    right: 0;
+    z-index: 10;
+    background: var(--bg-contenedor);
+    border: 1px solid var(--borde-suave);
+    border-radius: 8px;
+    box-shadow: 0 6px 16px var(--sombra);
+    padding: 14px;
+    min-width: 180px;
+}
+
+.popup-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.popup-seccion:last-child {
+    margin-bottom: 0;
+}
+
+.popup-seccion h4 {
+    margin: 0 0 4px 0;
+    font-size: 0.85em;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.radio-opcion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+    color: var(--texto-principal);
+    cursor: pointer;
+}
+
+.radio-opcion input {
+    accent-color: var(--acento);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.pie-pagina {
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding: 16px 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
     font-size: 0.85em;
     color: var(--texto-secundario);
 }
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 46px;
-    height: 24px;
-    flex-shrink: 0;
+.pie-seccion {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+.pie-pagina a {
+    color: var(--texto-secundario);
+    text-decoration: none;
 }
 
-.switch .slider {
-    position: absolute;
-    cursor: pointer;
-    inset: 0;
-    background-color: var(--switch-bg);
-    border-radius: 999px;
-    transition: background-color 0.25s ease;
-}
-
-.switch .slider::before {
-    content: "";
-    position: absolute;
-    height: 18px;
-    width: 18px;
-    left: 3px;
-    bottom: 3px;
-    background-color: var(--switch-circulo);
-    border-radius: 50%;
-    transition: transform 0.25s ease;
-}
-
-.switch input:checked + .slider {
-    background-color: var(--switch-bg-activo);
-}
-
-.switch input:checked + .slider::before {
-    transform: translateX(22px);
-}
-
-.switch input:focus-visible + .slider {
-    outline: 2px solid var(--acento);
-    outline-offset: 2px;
+.pie-pagina a:hover {
+    color: var(--acento);
+    text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -276,16 +322,21 @@ h2, h3 {
         padding: 12px;
     }
 
-    .selector-tema {
-        justify-content: space-between;
-    }
-
     .acciones-documento {
         flex-direction: column;
     }
 
     .btn-accion {
         min-width: 0;
+    }
+
+    .popup-config {
+        min-width: 160px;
+    }
+
+    .pie-pagina {
+        flex-direction: column;
+        gap: 8px;
     }
 }
 

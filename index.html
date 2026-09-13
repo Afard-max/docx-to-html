@@ -7,22 +7,19 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <title>Visor de Word en Pantalla</title>
+    <title id="titulo-pagina">Visor de Word en Pantalla</title>
 
-    <!-- Aplica el tema guardado ANTES de pintar la página, para evitar un
-         parpadeo de tema claro antes de que main.js (con defer) se ejecute -->
     <script>
         (function () {
-            const temaGuardado = localStorage.getItem('tema');
-            if (temaGuardado === 'dark') {
+            const temaGuardado = localStorage.getItem('tema') || 'system';
+            const prefiereOscuroSO = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (temaGuardado === 'dark' || (temaGuardado === 'system' && prefiereOscuroSO)) {
                 document.documentElement.dataset.theme = 'dark';
             }
         })();
     </script>
 
-    <!--CARGA DE LA LIBRERÍA OFICIAL -->
     <script src="mammoth.browser.js"></script>
-    <!-- LÓGICA DE LA PÁGINA -->
     <script src="main.js" defer></script>
 </head>
 
@@ -30,43 +27,88 @@
 
     <div class="contenedor">
 
-        <div class="selector-tema">
-            <span>Claro</span>
-            <label class="switch">
-                <input type="checkbox" id="switch-tema"
-                    aria-label="Cambiar entre modo claro y oscuro">
-                <span class="slider"></span>
-            </label>
-            <span>Oscuro</span>
+        <div class="barra-superior">
+            <div class="config-wrapper">
+                <button type="button" id="btn-config" class="btn-config" aria-haspopup="true"
+                    aria-expanded="false" data-i18n-aria-label="configAbrir" aria-label="Abrir configuración">
+                    ⚙️
+                </button>
+
+                <div id="popup-config" class="popup-config" hidden>
+                    <div class="popup-seccion">
+                        <h4 data-i18n="configTema">Tema</h4>
+                        <label class="radio-opcion">
+                            <input type="radio" name="tema" value="light">
+                            <span data-i18n="configClaro">Claro</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="tema" value="dark">
+                            <span data-i18n="configOscuro">Oscuro</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="tema" value="system">
+                            <span data-i18n="configSistema">Sistema</span>
+                        </label>
+                    </div>
+
+                    <div class="popup-seccion">
+                        <h4 data-i18n="configIdioma">Idioma</h4>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="es">
+                            <span>Español</span>
+                        </label>
+                        <label class="radio-opcion">
+                            <input type="radio" name="idioma" value="en">
+                            <span>English</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <h2>Insertar y Visualizar Documento de Word</h2>
+        <h2 data-i18n="titulo">Insertar y Visualizar Documento de Word</h2>
 
-        <!-- INDICADOR DE LA LIBRERÍA (COMO VISUALIZA) -->
         <div id="estado" class="estado-libreria" style="color: #d9534f;">Verificando conexión con
             librería Mammoth...</div>
 
-        <!-- INSERTA EL DOCUMENTO -->
-        <button type="button" id="btn-seleccionar" class="input-zona">
+        <button type="button" id="btn-seleccionar" class="input-zona" data-i18n="btnSeleccionar">
             Haz clic aquí para seleccionar tu archivo (.docx)
         </button>
-        <label for="archivo-word" class="visualmente-oculto">
+        <label for="archivo-word" class="visualmente-oculto" data-i18n="labelArchivo">
             Seleccionar archivo Word
         </label>
         <input type="file" id="archivo-word" accept=".docx" style="display: none;">
 
-        <h3>Contenido del Documento:</h3>
+        <div id="info-archivo" class="info-archivo" hidden></div>
+
+        <h3 data-i18n="contenidoTitulo">Contenido del Documento:</h3>
         <div id="visor-contenido">El documento seleccionado se mostrará aquí...</div>
 
         <div id="acciones-documento" class="acciones-documento" hidden>
-            <button type="button" id="btn-descargar" class="btn-accion">
+            <button type="button" id="btn-descargar" class="btn-accion" data-i18n="btnDescargar">
                 Descargar como HTML
             </button>
-            <button type="button" id="btn-quitar" class="btn-accion btn-accion-peligro">
+            <button type="button" id="btn-copiar" class="btn-accion" data-i18n="btnCopiar">
+                Copiar HTML
+            </button>
+            <button type="button" id="btn-quitar" class="btn-accion btn-accion-peligro" data-i18n="btnQuitar">
                 Quitar documento
             </button>
         </div>
     </div>
+
+    <footer class="pie-pagina">
+        <div class="pie-seccion">
+            <a href="https://github.com/Afard-max/docx-to-html" target="_blank" rel="noopener noreferrer"
+                data-i18n="footerRepo">Código en GitHub</a>
+            <a href="https://github.com/mwilliamson/mammoth.js" target="_blank" rel="noopener noreferrer"
+                data-i18n="footerMammoth">Hecho con Mammoth.js</a>
+        </div>
+        <div class="pie-seccion">
+            <a href="https://github.com/Afard-max" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/ruizdiazalexandertech/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </footer>
 
 </body>
 
