@@ -17,6 +17,7 @@
 
     --estado-error: #d9534f;
     --estado-ok: #28a745;
+
     --texto-boton-accion: #ffffff;
 }
 
@@ -66,6 +67,11 @@ html[data-contraste="true"][data-theme="dark"] {
     --input-zona-bg: #000000;
     --estado-error: #ff8080;
     --estado-ok: #80ff80;
+
+    /* En este modo el acento y el error son fondos CLAROS (amarillo / rojo
+       claro), así que el texto de los botones debe ser negro para que se
+       pueda leer. En el resto de las combinaciones los fondos son oscuros
+       y el blanco (definido en :root) funciona bien. */
     --texto-boton-accion: #000000;
 }
 
@@ -157,6 +163,46 @@ h2, h3 {
 }
 
 /* ==========================================================================
+   PROGRESO DE CONVERSIÓN (spinner)
+   ========================================================================== */
+
+.progreso-conversion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 4px;
+    margin-bottom: 5px;
+    color: var(--texto-secundario);
+    font-size: 0.95em;
+}
+
+.spinner {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    border: 3px solid var(--borde-suave);
+    border-top-color: var(--acento);
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+html[data-contraste="true"] .spinner {
+    border-width: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .spinner {
+        animation-duration: 2.5s;
+    }
+}
+
+/* ==========================================================================
    VISOR DE CONTENIDO
    ========================================================================== */
 
@@ -181,6 +227,42 @@ h2, h3 {
     font-size: 0.9em;
     margin-bottom: 15px;
     font-weight: bold;
+}
+
+/* ==========================================================================
+   DETALLES DE LA CONVERSIÓN (advertencias de Mammoth)
+   ========================================================================== */
+
+.detalles-conversion {
+    margin-top: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--borde-suave);
+    border-radius: 4px;
+    padding: 10px 14px;
+    background: var(--input-zona-bg);
+}
+
+.detalles-conversion summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--texto-principal);
+    font-size: 0.9em;
+}
+
+.detalles-conversion summary:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 2px;
+}
+
+.detalles-conversion ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+    color: var(--texto-secundario);
+    font-size: 0.85em;
+}
+
+.detalles-conversion li {
+    margin-bottom: 4px;
 }
 
 /* ==========================================================================
@@ -220,6 +302,127 @@ h2, h3 {
 
 .btn-accion-peligro {
     background: var(--estado-error);
+}
+
+/* ==========================================================================
+   HISTORIAL DE CONVERSIONES
+   ========================================================================== */
+
+.historial-seccion {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--borde-suave);
+}
+
+.historial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.historial-header h3 {
+    margin: 0;
+}
+
+.btn-texto {
+    background: none;
+    border: none;
+    color: var(--estado-error);
+    font-size: 0.85em;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: inherit;
+    padding: 4px;
+}
+
+.btn-texto:hover {
+    opacity: 0.8;
+}
+
+.btn-texto:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 2px;
+}
+
+.lista-historial {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.historial-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--borde-suave);
+    border-radius: 4px;
+    background: var(--input-zona-bg);
+    flex-wrap: wrap;
+}
+
+.historial-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.historial-nombre {
+    font-weight: bold;
+    color: var(--texto-principal);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 320px;
+}
+
+.historial-fecha {
+    font-size: 0.8em;
+    color: var(--texto-secundario);
+}
+
+.historial-acciones {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.historial-acciones button {
+    padding: 6px 10px;
+    font-size: 0.8em;
+    border-radius: 4px;
+    border: 1px solid var(--borde-suave);
+    background: var(--bg-contenedor);
+    color: var(--texto-principal);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.historial-acciones button:hover {
+    opacity: 0.85;
+}
+
+.historial-acciones button:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 2px;
+}
+
+.historial-acciones .historial-btn-borrar {
+    color: var(--estado-error);
+    border-color: var(--estado-error);
+}
+
+.historial-vacio {
+    font-size: 0.9em;
+    color: var(--texto-secundario);
+    margin: 0;
 }
 
 /* ==========================================================================
@@ -402,6 +605,19 @@ html[dir="rtl"] .popup-seccion--scroll {
         flex-direction: column;
         align-items: center;
         gap: 12px;
+    }
+
+    .historial-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .historial-nombre {
+        max-width: 100%;
+    }
+
+    .historial-acciones {
+        justify-content: flex-end;
     }
 }
 

@@ -30,7 +30,14 @@ const TRADUCCIONES = {
         configIdioma: "Idioma",
         imagenOmitida: "[Imagen Omitida]",
         footerRepo: "Código en GitHub",
-        footerMammoth: "Hecho con Mammoth.js"
+        footerMammoth: "Hecho con Mammoth.js",
+        detallesResumen: "Ver detalles de la conversión",
+        historialTitulo: "Historial de conversiones",
+        historialLimpiar: "Borrar historial",
+        historialVacio: "Todavía no convertiste ningún documento.",
+        historialDescargar: "Descargar",
+        historialBorrarItem: "Eliminar",
+        historialConfirmarBorrado: "¿Borrar todo el historial de conversiones?"
     },
     en: {
         tituloPagina: "Word Document Viewer",
@@ -60,7 +67,14 @@ const TRADUCCIONES = {
         configIdioma: "Language",
         imagenOmitida: "[Image Omitted]",
         footerRepo: "Code on GitHub",
-        footerMammoth: "Made with Mammoth.js"
+        footerMammoth: "Made with Mammoth.js",
+        detallesResumen: "View conversion details",
+        historialTitulo: "Conversion history",
+        historialLimpiar: "Clear history",
+        historialVacio: "You haven't converted any documents yet.",
+        historialDescargar: "Download",
+        historialBorrarItem: "Remove",
+        historialConfirmarBorrado: "Clear the entire conversion history?"
     },
     fr: {
         tituloPagina: "Visionneuse de documents Word",
@@ -90,7 +104,14 @@ const TRADUCCIONES = {
         configIdioma: "Langue",
         imagenOmitida: "[Image omise]",
         footerRepo: "Code sur GitHub",
-        footerMammoth: "Fait avec Mammoth.js"
+        footerMammoth: "Fait avec Mammoth.js",
+        detallesResumen: "Voir les détails de la conversion",
+        historialTitulo: "Historique des conversions",
+        historialLimpiar: "Effacer l'historique",
+        historialVacio: "Vous n'avez encore converti aucun document.",
+        historialDescargar: "Télécharger",
+        historialBorrarItem: "Supprimer",
+        historialConfirmarBorrado: "Effacer tout l'historique des conversions ?"
     },
     pt: {
         tituloPagina: "Visualizador de Documentos Word",
@@ -120,7 +141,14 @@ const TRADUCCIONES = {
         configIdioma: "Idioma",
         imagenOmitida: "[Imagem Omitida]",
         footerRepo: "Código no GitHub",
-        footerMammoth: "Feito com Mammoth.js"
+        footerMammoth: "Feito com Mammoth.js",
+        detallesResumen: "Ver detalhes da conversão",
+        historialTitulo: "Histórico de conversões",
+        historialLimpiar: "Limpar histórico",
+        historialVacio: "Você ainda não converteu nenhum documento.",
+        historialDescargar: "Baixar",
+        historialBorrarItem: "Remover",
+        historialConfirmarBorrado: "Limpar todo o histórico de conversões?"
     },
     ru: {
         tituloPagina: "Просмотр документов Word",
@@ -150,7 +178,14 @@ const TRADUCCIONES = {
         configIdioma: "Язык",
         imagenOmitida: "[Изображение пропущено]",
         footerRepo: "Код на GitHub",
-        footerMammoth: "Сделано с Mammoth.js"
+        footerMammoth: "Сделано с Mammoth.js",
+        detallesResumen: "Показать детали конвертации",
+        historialTitulo: "История конвертаций",
+        historialLimpiar: "Очистить историю",
+        historialVacio: "Вы ещё не конвертировали ни одного документа.",
+        historialDescargar: "Скачать",
+        historialBorrarItem: "Удалить",
+        historialConfirmarBorrado: "Очистить всю историю конвертаций?"
     },
     zh: {
         tituloPagina: "Word 文档查看器",
@@ -180,7 +215,14 @@ const TRADUCCIONES = {
         configIdioma: "语言",
         imagenOmitida: "[图片已省略]",
         footerRepo: "GitHub 上的代码",
-        footerMammoth: "由 Mammoth.js 构建"
+        footerMammoth: "由 Mammoth.js 构建",
+        detallesResumen: "查看转换详情",
+        historialTitulo: "转换历史",
+        historialLimpiar: "清除历史记录",
+        historialVacio: "您还没有转换过任何文档。",
+        historialDescargar: "下载",
+        historialBorrarItem: "删除",
+        historialConfirmarBorrado: "要清除全部转换历史吗？"
     },
     hi: {
         tituloPagina: "वर्ड दस्तावेज़ व्यूअर",
@@ -210,7 +252,14 @@ const TRADUCCIONES = {
         configIdioma: "भाषा",
         imagenOmitida: "[छवि छोड़ी गई]",
         footerRepo: "GitHub पर कोड",
-        footerMammoth: "Mammoth.js से बनाया गया"
+        footerMammoth: "Mammoth.js से बनाया गया",
+        detallesResumen: "रूपांतरण का विवरण देखें",
+        historialTitulo: "रूपांतरण इतिहास",
+        historialLimpiar: "इतिहास साफ़ करें",
+        historialVacio: "आपने अभी तक कोई दस्तावेज़ परिवर्तित नहीं किया है।",
+        historialDescargar: "डाउनलोड करें",
+        historialBorrarItem: "हटाएँ",
+        historialConfirmarBorrado: "क्या पूरा रूपांतरण इतिहास साफ़ करें?"
     },
     ar: {
         tituloPagina: "عارض مستندات وورد",
@@ -240,7 +289,14 @@ const TRADUCCIONES = {
         configIdioma: "اللغة",
         imagenOmitida: "[تم حذف الصورة]",
         footerRepo: "الكود على GitHub",
-        footerMammoth: "صُنع باستخدام Mammoth.js"
+        footerMammoth: "صُنع باستخدام Mammoth.js",
+        detallesResumen: "عرض تفاصيل التحويل",
+        historialTitulo: "سجل التحويلات",
+        historialLimpiar: "مسح السجل",
+        historialVacio: "لم تقم بتحويل أي مستند بعد.",
+        historialDescargar: "تنزيل",
+        historialBorrarItem: "إزالة",
+        historialConfirmarBorrado: "هل تريد مسح سجل التحويلات بالكامل؟"
     },
     bn: {
         tituloPagina: "ওয়ার্ড ডকুমেন্ট ভিউয়ার",
@@ -270,7 +326,14 @@ const TRADUCCIONES = {
         configIdioma: "ভাষা",
         imagenOmitida: "[ছবি বাদ দেওয়া হয়েছে]",
         footerRepo: "GitHub-এ কোড",
-        footerMammoth: "Mammoth.js দিয়ে তৈরি"
+        footerMammoth: "Mammoth.js দিয়ে তৈরি",
+        detallesResumen: "রূপান্তরের বিবরণ দেখুন",
+        historialTitulo: "রূপান্তরের ইতিহাস",
+        historialLimpiar: "ইতিহাস মুছুন",
+        historialVacio: "আপনি এখনও কোনো ডকুমেন্ট রূপান্তর করেননি।",
+        historialDescargar: "ডাউনলোড করুন",
+        historialBorrarItem: "সরান",
+        historialConfirmarBorrado: "পুরো রূপান্তর ইতিহাস মুছবেন?"
     },
     ur: {
         tituloPagina: "ورڈ دستاویز ویور",
@@ -300,7 +363,14 @@ const TRADUCCIONES = {
         configIdioma: "زبان",
         imagenOmitida: "[تصویر چھوڑ دی گئی]",
         footerRepo: "GitHub پر کوڈ",
-        footerMammoth: "Mammoth.js کے ساتھ بنایا گیا"
+        footerMammoth: "Mammoth.js کے ساتھ بنایا گیا",
+        detallesResumen: "تبدیلی کی تفصیلات دیکھیں",
+        historialTitulo: "تبدیلی کی تاریخ",
+        historialLimpiar: "تاریخ صاف کریں",
+        historialVacio: "آپ نے ابھی تک کوئی دستاویز تبدیل نہیں کی۔",
+        historialDescargar: "ڈاؤن لوڈ کریں",
+        historialBorrarItem: "ہٹائیں",
+        historialConfirmarBorrado: "کیا پوری تبدیلی کی تاریخ صاف کر دی جائے؟"
     }
 };
 
@@ -310,8 +380,85 @@ let estadoLibreriaOk = null;
 // 'inicial' | 'procesando' | 'contenido' | 'vacio' | 'error' | 'tipoInvalido'
 let visorEstado = 'inicial';
 
-function t(clave) {
-    return TRADUCCIONES[idiomaActual][clave] || clave;
+// Advertencias de la última conversión (resultado.messages de Mammoth)
+let advertenciasActuales = [];
+
+// ==========================================================================
+// HISTORIAL LOCAL DE CONVERSIONES (localStorage)
+// ==========================================================================
+const HISTORIAL_CLAVE = 'historialConversiones';
+const HISTORIAL_MAX = 8;
+
+function cargarHistorial() {
+    try {
+        const datos = JSON.parse(localStorage.getItem(HISTORIAL_CLAVE) || '[]');
+        return Array.isArray(datos) ? datos : [];
+    } catch (error) {
+        console.warn('No se pudo leer el historial guardado:', error);
+        return [];
+    }
+}
+
+function guardarHistorial(historial) {
+    try {
+        localStorage.setItem(HISTORIAL_CLAVE, JSON.stringify(historial));
+        return true;
+    } catch (error) {
+        // Probablemente se llenó la cuota de localStorage (documentos grandes).
+        console.warn('No se pudo guardar el historial (posible límite de almacenamiento):', error);
+        return false;
+    }
+}
+
+function agregarAlHistorial(nombreBase, html) {
+    let historial = cargarHistorial();
+    historial.unshift({
+        nombre: nombreBase,
+        fecha: new Date().toISOString(),
+        html: html
+    });
+    historial = historial.slice(0, HISTORIAL_MAX);
+
+    // Si el nuevo historial no entra en localStorage (documento muy pesado),
+    // vamos descartando las entradas más viejas hasta que entre.
+    while (historial.length > 0 && !guardarHistorial(historial)) {
+        historial.pop();
+    }
+}
+
+function formatearFechaHistorial(iso) {
+    const fecha = new Date(iso);
+    try {
+        return fecha.toLocaleString(idiomaActual, { dateStyle: 'medium', timeStyle: 'short' });
+    } catch (error) {
+        return fecha.toLocaleString();
+    }
+}
+
+function construirDocumentoHtml(nombre, htmlInterno) {
+    return `<!DOCTYPE html>
+<html lang="${idiomaActual}">
+<head>
+<meta charset="UTF-8">
+<title>${nombre}</title>
+</head>
+<body>
+${htmlInterno}
+</body>
+</html>`;
+}
+
+function descargarHtml(nombreBase, htmlInterno) {
+    const documentoCompleto = construirDocumentoHtml(nombreBase, htmlInterno);
+    const blob = new Blob([documentoCompleto], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+
+    const enlaceTemporal = document.createElement('a');
+    enlaceTemporal.href = url;
+    enlaceTemporal.download = `${nombreBase}.html`;
+    enlaceTemporal.click();
+
+    URL.revokeObjectURL(url);
 }
 
 function esRTL(idioma) {
@@ -322,6 +469,10 @@ function formatearTamano(bytes) {
     if (bytes < 1024) return `${bytes} B`;
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
     return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
+function t(clave) {
+    return TRADUCCIONES[idiomaActual][clave] || clave;
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -338,6 +489,16 @@ window.addEventListener('DOMContentLoaded', () => {
     const zonaCarga = document.getElementById('btn-seleccionar');
     const infoArchivo = document.getElementById('info-archivo');
     const checkContraste = document.getElementById('check-contraste');
+
+    const progresoConversion = document.getElementById('progreso-conversion');
+    const progresoTexto = document.getElementById('progreso-texto');
+
+    const detallesConversion = document.getElementById('detalles-conversion');
+    const listaAdvertencias = document.getElementById('lista-advertencias');
+
+    const listaHistorial = document.getElementById('lista-historial');
+    const historialVacioEl = document.getElementById('historial-vacio');
+    const btnLimpiarHistorial = document.getElementById('btn-limpiar-historial');
 
     let htmlConvertidoActual = null;
     let nombreBaseActual = null;
@@ -370,7 +531,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 visor.textContent = t('visorInicial');
                 break;
             case 'procesando':
-                visor.innerHTML = `<em>${t('visorProcesando')}</em>`;
+                progresoTexto.textContent = t('visorProcesando');
                 break;
             case 'vacio':
                 visor.innerHTML = `<span style='color:orange;'>${t('visorVacio')}</span>`;
@@ -386,6 +547,8 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('input[name="idioma"]').forEach(radio => {
             radio.checked = radio.value === idiomaActual;
         });
+
+        renderizarHistorial();
     }
 
     function cambiarIdioma(nuevoIdioma) {
@@ -431,6 +594,95 @@ window.addEventListener('DOMContentLoaded', () => {
         infoArchivo.textContent = "";
     }
 
+    // ======================================================
+    // ADVERTENCIAS DE LA CONVERSIÓN (resultado.messages de Mammoth)
+    // ======================================================
+    function mostrarAdvertencias(mensajes) {
+        advertenciasActuales = mensajes || [];
+        listaAdvertencias.innerHTML = '';
+
+        if (advertenciasActuales.length === 0) {
+            detallesConversion.hidden = true;
+            return;
+        }
+
+        advertenciasActuales.forEach(msg => {
+            const li = document.createElement('li');
+            li.textContent = msg.message;
+            listaAdvertencias.appendChild(li);
+        });
+        detallesConversion.hidden = false;
+    }
+
+    function ocultarAdvertencias() {
+        advertenciasActuales = [];
+        listaAdvertencias.innerHTML = '';
+        detallesConversion.hidden = true;
+    }
+
+    // ======================================================
+    // HISTORIAL: RENDERIZADO Y ACCIONES
+    // ======================================================
+    function renderizarHistorial() {
+        const historial = cargarHistorial();
+        listaHistorial.innerHTML = '';
+
+        const hayItems = historial.length > 0;
+        historialVacioEl.hidden = hayItems;
+        btnLimpiarHistorial.hidden = !hayItems;
+
+        historial.forEach((item, indice) => {
+            const li = document.createElement('li');
+            li.className = 'historial-item';
+
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'historial-info';
+
+            const nombreSpan = document.createElement('span');
+            nombreSpan.className = 'historial-nombre';
+            nombreSpan.textContent = item.nombre;
+            nombreSpan.title = item.nombre;
+
+            const fechaSpan = document.createElement('span');
+            fechaSpan.className = 'historial-fecha';
+            fechaSpan.textContent = formatearFechaHistorial(item.fecha);
+
+            infoDiv.append(nombreSpan, fechaSpan);
+
+            const accionesDiv = document.createElement('div');
+            accionesDiv.className = 'historial-acciones';
+
+            const btnDescargarItem = document.createElement('button');
+            btnDescargarItem.type = 'button';
+            btnDescargarItem.textContent = t('historialDescargar');
+            btnDescargarItem.addEventListener('click', () => {
+                descargarHtml(item.nombre, item.html);
+            });
+
+            const btnBorrarItem = document.createElement('button');
+            btnBorrarItem.type = 'button';
+            btnBorrarItem.className = 'historial-btn-borrar';
+            btnBorrarItem.textContent = t('historialBorrarItem');
+            btnBorrarItem.addEventListener('click', () => {
+                const historialActual = cargarHistorial();
+                historialActual.splice(indice, 1);
+                guardarHistorial(historialActual);
+                renderizarHistorial();
+            });
+
+            accionesDiv.append(btnDescargarItem, btnBorrarItem);
+            li.append(infoDiv, accionesDiv);
+            listaHistorial.appendChild(li);
+        });
+    }
+
+    btnLimpiarHistorial.addEventListener('click', () => {
+        if (confirm(t('historialConfirmarBorrado'))) {
+            guardarHistorial([]);
+            renderizarHistorial();
+        }
+    });
+
     // BOTÓN "QUITAR DOCUMENTO"
     btnQuitar.addEventListener('click', () => {
         inputArchivo.value = "";
@@ -440,32 +692,13 @@ window.addEventListener('DOMContentLoaded', () => {
         nombreBaseActual = null;
         ocultarAccionesDocumento();
         ocultarInfoArchivo();
+        ocultarAdvertencias();
     });
 
     // BOTÓN "DESCARGAR COMO HTML"
     btnDescargar.addEventListener('click', () => {
         if (!htmlConvertidoActual) return;
-
-        const documentoCompleto = `<!DOCTYPE html>
-<html lang="${idiomaActual}">
-<head>
-<meta charset="UTF-8">
-<title>${nombreBaseActual}</title>
-</head>
-<body>
-${htmlConvertidoActual}
-</body>
-</html>`;
-
-        const blob = new Blob([documentoCompleto], { type: "text/html" });
-        const url = URL.createObjectURL(blob);
-
-        const enlaceTemporal = document.createElement('a');
-        enlaceTemporal.href = url;
-        enlaceTemporal.download = `${nombreBaseActual}.html`;
-        enlaceTemporal.click();
-
-        URL.revokeObjectURL(url);
+        descargarHtml(nombreBaseActual, htmlConvertidoActual);
     });
 
     // BOTÓN "COPIAR HTML"
@@ -585,13 +818,17 @@ ${htmlConvertidoActual}
             visor.innerHTML = `<span style='color:red;'>${t('tipoInvalido')}</span>`;
             ocultarAccionesDocumento();
             ocultarInfoArchivo();
+            ocultarAdvertencias();
             return;
         }
 
         mostrarInfoArchivo(archivo);
         visorEstado = 'procesando';
-        visor.innerHTML = `<em>${t('visorProcesando')}</em>`;
+        progresoTexto.textContent = t('visorProcesando');
+        progresoConversion.hidden = false;
+        visor.innerHTML = '';
         ocultarAccionesDocumento();
+        ocultarAdvertencias();
 
         try {
             const arrayBuffer = await archivo.arrayBuffer();
@@ -611,6 +848,9 @@ ${htmlConvertidoActual}
 
             const resultado = await mammoth.convertToHtml({ arrayBuffer: arrayBuffer }, opciones);
 
+            progresoConversion.hidden = true;
+            mostrarAdvertencias(resultado.messages);
+
             if (resultado.value.trim() === "") {
                 visorEstado = 'vacio';
                 visor.innerHTML = `<span style='color:orange;'>${t('visorVacio')}</span>`;
@@ -622,13 +862,18 @@ ${htmlConvertidoActual}
                 htmlConvertidoActual = resultado.value;
                 nombreBaseActual = archivo.name.replace(/\.docx$/i, "");
                 mostrarAccionesDocumento();
+
+                agregarAlHistorial(nombreBaseActual, resultado.value);
+                renderizarHistorial();
             }
         } catch (error) {
             console.error(error);
+            progresoConversion.hidden = true;
             visorEstado = 'error';
             visor.innerHTML = `<span style='color:red;'>${t('visorErrorProceso')}</span>`;
             htmlConvertidoActual = null;
             nombreBaseActual = null;
+            ocultarAdvertencias();
         }
     }
 
@@ -666,4 +911,7 @@ ${htmlConvertidoActual}
             procesarArchivo(archivos[0]);
         }
     });
+
+    // Primer render del historial (por si ya había conversiones guardadas)
+    renderizarHistorial();
 });

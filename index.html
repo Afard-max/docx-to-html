@@ -9,6 +9,19 @@
 
     <title id="titulo-pagina">Visor de Word en Pantalla</title>
 
+    <!-- Meta tags Open Graph / Twitter Card: preview al compartir el link -->
+    <meta property="og:title" content="Visor de Word en Pantalla">
+    <meta property="og:description" content="Convertí y visualizá documentos Word (.docx) directamente en tu navegador, sin subir nada a un servidor.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://afard-max.github.io/docx-to-html/">
+    <meta property="og:image" content="https://afard-max.github.io/docx-to-html/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Visor de Word en Pantalla">
+    <meta name="twitter:description" content="Convertí y visualizá documentos Word (.docx) directamente en tu navegador, sin subir nada a un servidor.">
+    <meta name="twitter:image" content="https://afard-max.github.io/docx-to-html/og-image.png">
+
     <!-- Aplica tema, alto contraste y dirección de texto (RTL/LTR) ANTES de
          pintar la página, para evitar parpadeos antes de que main.js corra. -->
     <script>
@@ -133,8 +146,18 @@
 
         <div id="info-archivo" class="info-archivo" hidden></div>
 
+        <div id="progreso-conversion" class="progreso-conversion" hidden>
+            <div class="spinner" aria-hidden="true"></div>
+            <span id="progreso-texto">Procesando y convirtiendo documento...</span>
+        </div>
+
         <h3 data-i18n="contenidoTitulo">Contenido del Documento:</h3>
         <div id="visor-contenido">El documento seleccionado se mostrará aquí...</div>
+
+        <details id="detalles-conversion" class="detalles-conversion" hidden>
+            <summary data-i18n="detallesResumen">Ver detalles de la conversión</summary>
+            <ul id="lista-advertencias"></ul>
+        </details>
 
         <div id="acciones-documento" class="acciones-documento" hidden>
             <button type="button" id="btn-descargar" class="btn-accion" data-i18n="btnDescargar">
@@ -146,6 +169,19 @@
             <button type="button" id="btn-quitar" class="btn-accion btn-accion-peligro" data-i18n="btnQuitar">
                 Quitar documento
             </button>
+        </div>
+
+        <div class="historial-seccion">
+            <div class="historial-header">
+                <h3 data-i18n="historialTitulo">Historial de conversiones</h3>
+                <button type="button" id="btn-limpiar-historial" class="btn-texto" data-i18n="historialLimpiar" hidden>
+                    Borrar historial
+                </button>
+            </div>
+            <ul id="lista-historial" class="lista-historial"></ul>
+            <p id="historial-vacio" class="historial-vacio" data-i18n="historialVacio">
+                Todavía no convertiste ningún documento.
+            </p>
         </div>
     </div>
 
