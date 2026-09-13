@@ -176,6 +176,13 @@ h2, h3 {
     font-size: 0.95em;
 }
 
+/* La regla anterior empataba en especificidad con [hidden] del navegador y
+   ganaba por orden de aparición, dejando el spinner visible aunque tuviera
+   el atributo hidden. Esto le devuelve la prioridad al atributo. */
+.progreso-conversion[hidden] {
+    display: none;
+}
+
 .spinner {
     width: 26px;
     height: 26px;
