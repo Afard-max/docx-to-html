@@ -1,0 +1,296 @@
+/* ==========================================================================
+    VARIABLES DE TEMA
+   ========================================================================== */
+
+:root {
+    color-scheme: light; /* Le indica al navegador qué esquema usan los widgets nativos (checkboxes, scrollbars, selects) */
+
+    --bg-body: #f4f4f9;
+    --bg-contenedor: #ffffff;
+    --texto-principal: #222222;
+    --texto-secundario: #555555;
+    --borde-suave: #dddddd;
+    --sombra: rgba(0, 0, 0, 0.1);
+
+    --acento: #007bff;
+    --input-zona-bg: #f8fafd;
+
+    --estado-error: #d9534f;
+    --estado-ok: #28a745;
+
+    --switch-bg: #cccccc;
+    --switch-bg-activo: #007bff;
+    --switch-circulo: #ffffff;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --bg-body: #14161a;
+    --bg-contenedor: #1e2126;
+    --texto-principal: #e8e8e8;
+    --texto-secundario: #a8a8a8;
+    --borde-suave: #3a3d42;
+    --sombra: rgba(0, 0, 0, 0.4);
+
+    --acento: #4da3ff;
+    --input-zona-bg: #22262c;
+
+    --estado-error: #ff6b66;
+    --estado-ok: #4ade80;
+
+    --switch-bg: #3a3d42;
+    --switch-bg-activo: #4da3ff;
+    --switch-circulo: #1e2126;
+}
+
+/* ==========================================================================
+    BASE
+   ========================================================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: var(--bg-body);
+    color: var(--texto-principal);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-contenedor);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--sombra);
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+h2, h3 {
+    color: var(--texto-principal);
+}
+
+/* ==========================================================================
+    ZONA DE CARGA DE ARCHIVO
+   ========================================================================== */
+
+.input-zona {
+    border: 2px dashed var(--acento);
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: var(--input-zona-bg);
+    width: 100%;
+    font-weight: bold;
+    color: var(--acento);
+    font-size: 1em;
+    font-family: inherit;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.input-zona:hover {
+    opacity: 0.85;
+}
+
+.input-zona:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 2px;
+}
+
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   VISOR DE CONTENIDO
+   Se mantiene SIEMPRE claro ("hoja de papel"), independientemente del tema
+   activo. El HTML que entrega Mammoth trae su propio color de texto (heredado
+   del .docx), normalmente oscuro. Si esta zona pasara a fondo oscuro con el
+   tema, ese texto quedaría invisible sin forma confiable de corregirlo
+   automáticamente.
+   ========================================================================== */
+
+#visor-contenido {
+    border: 1px solid #ccc;
+    padding: 20px;
+    min-height: 200px;
+    background: #ffffff;
+    color: #111111;
+    overflow-y: auto;
+    max-height: 500px;
+    border-radius: 4px;
+    color-scheme: light; /* fuerza scrollbar claro en esta zona incluso en tema oscuro */
+}
+
+#visor-contenido img {
+    max-width: 100%;
+    height: auto;
+}
+
+.estado-libreria {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   BOTONES DE ACCIÓN (DESCARGAR / QUITAR DOCUMENTO)
+   ========================================================================== */
+
+.acciones-documento {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-accion {
+    flex: 1;
+    min-width: 160px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    background: var(--acento);
+    color: #ffffff;
+    transition: opacity 0.2s ease;
+}
+
+.btn-accion:hover {
+    opacity: 0.85;
+}
+
+.btn-accion:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 2px;
+}
+
+.btn-accion-peligro {
+    background: var(--estado-error);
+}
+
+/* ==========================================================================
+   SWITCH DE TEMA (CLARO / OSCURO)
+   ========================================================================== */
+
+.selector-tema {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.selector-tema span {
+    font-size: 0.85em;
+    color: var(--texto-secundario);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--switch-bg);
+    border-radius: 999px;
+    transition: background-color 0.25s ease;
+}
+
+.switch .slider::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--switch-circulo);
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+}
+
+.switch input:checked + .slider {
+    background-color: var(--switch-bg-activo);
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(22px);
+}
+
+.switch input:focus-visible + .slider {
+    outline: 2px solid var(--acento);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    .contenedor {
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    h3 {
+        font-size: 1.05em;
+    }
+
+    .input-zona {
+        padding: 20px 12px;
+        font-size: 0.95em;
+    }
+
+    #visor-contenido {
+        max-height: 350px;
+        padding: 12px;
+    }
+
+    .selector-tema {
+        justify-content: space-between;
+    }
+
+    .acciones-documento {
+        flex-direction: column;
+    }
+
+    .btn-accion {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .input-zona {
+        font-size: 0.85em;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Visor de Word en Pantalla</title>
+
+    <!-- Aplica el tema guardado ANTES de pintar la página, para evitar un
+         parpadeo de tema claro antes de que main.js (con defer) se ejecute -->
+    <script>
+        (function () {
+            const temaGuardado = localStorage.getItem('tema');
+            if (temaGuardado === 'dark') {
+                document.documentElement.dataset.theme = 'dark';
+            }
+        })();
+    </script>
+
+    <!--CARGA DE LA LIBRERÍA OFICIAL -->
+    <script src="mammoth.browser.js"></script>
+    <!-- LÓGICA DE LA PÁGINA -->
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="selector-tema">
+            <span>Claro</span>
+            <label class="switch">
+                <input type="checkbox" id="switch-tema"
+                    aria-label="Cambiar entre modo claro y oscuro">
+                <span class="slider"></span>
+            </label>
+            <span>Oscuro</span>
+        </div>
+
+        <h2>Insertar y Visualizar Documento de Word</h2>
+
+        <!-- INDICADOR DE LA LIBRERÍA (COMO VISUALIZA) -->
+        <div id="estado" class="estado-libreria" style="color: #d9534f;">Verificando conexión con
+            librería Mammoth...</div>
+
+        <!-- INSERTA EL DOCUMENTO -->
+        <button type="button" id="btn-seleccionar" class="input-zona">
+            Haz clic aquí para seleccionar tu archivo (.docx)
+        </button>
+        <label for="archivo-word" class="visualmente-oculto">
+            Seleccionar archivo Word
+        </label>
+        <input type="file" id="archivo-word" accept=".docx" style="display: none;">
+
+        <h3>Contenido del Documento:</h3>
+        <div id="visor-contenido">El documento seleccionado se mostrará aquí...</div>
+
+        <div id="acciones-documento" class="acciones-documento" hidden>
+            <button type="button" id="btn-descargar" class="btn-accion">
+                Descargar como HTML
+            </button>
+            <button type="button" id="btn-quitar" class="btn-accion btn-accion-peligro">
+                Quitar documento
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
